@@ -1,0 +1,286 @@
+.chat__container{
+    width: 100%;
+    height: 80rem;
+    display: flex;
+}
+
+.chat__usersContainer{
+    width: 28%;
+    border: solid .1rem var(--light-gray);
+    position: relative;
+}
+
+.chat__usersSearchContainer{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid .1rem var(--light-gray);
+    overflow: hidden;
+}
+
+.search{
+    width: 70%;
+    height: 4rem;
+    padding: .8rem;
+    border-radius: 6rem;
+    border: none;
+    background-color: rgba(162, 162, 162, .2);
+    text-align: center;
+    outline: none;
+}
+
+.chat__usersHolder{
+    width: 100%;
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    position: relative;
+    padding: 2rem;
+}
+
+.chart__usersCard{
+    width: 100%;
+    padding: 1rem;
+    border: solid .1rem var(--light-gray);
+    display: flex;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.chart__usersCard:hover{
+    background-color: rgba(0,0,0, .1);
+}
+
+.chat__userImgBox{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.chat__userImg{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user__status{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    position: absolute;
+    right:10%;
+    bottom: 12%;
+    border: solid .2rem white;
+}
+
+.on{
+    background-color: #75E900;
+}
+
+.off{
+    background-color: #DC3545;
+}
+
+.user__detailsBox{
+    width: 75%;
+    padding: 0rem 1rem;
+}
+
+.user__boxTop{
+    width: 100%;
+    display: flex;
+}
+
+.user__name{
+    width: 60%;
+    font-size: var(--font-15rem);
+    font-weight: bolder;
+    color: var(--dark-blue);
+}
+
+.user__lastSeenDate{
+    width: 40%;
+    text-align: right;
+    color: #3BAFDA;
+    font-size: var(--font-13rem);
+    font-weight: 500;
+}
+
+.user__lastMessage{
+    width: 100%;
+    padding: .5rem 0 0 0;
+    font-size: var(--font-13rem);
+    color: #55595C;
+}
+
+.chat__notification{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background-color: red;
+    padding: .5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    right: -2%;
+    top: -8%;
+    font-size: var(--font-10rem);
+}
+
+.user__chatBox{
+    width: 72%;
+    height: 100%;
+    border: solid .1rem var(--light-gray);
+}
+
+.user__chatHeader{
+    width: 100%;
+    height: 12%;
+    border: solid .1rem var(--light-gray);
+    padding: 1.5rem 2rem;
+}
+
+.user__chatCard{
+    width: 30%;
+    height: 100%;
+    display: flex;
+}
+
+.user__chatImgBox{
+    height: 100%;
+}
+
+.user__chatImg{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user__chatDetails{
+    padding-left: 1rem;
+}
+
+.user__chatName{
+    font-size: var(--font-15rem);
+    font-weight: bolder;
+    color: var(--dark-blue);
+}
+
+.user__chatStatus{
+    padding-top: .5rem;
+    font-size: var(--font-12rem);
+}
+
+.chat__messagesBox{
+    width: 100%;
+    height: 76%;
+    background-color: var(--light-gray);
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.other__messageBox{
+    width: 60%;
+    margin: 1rem 0rem;
+    float: left;
+    display: flex;
+}
+
+.img__box{
+    width: 12%;
+    height: 100%;
+}
+
+.message__box{
+    width: 85%;
+}
+
+.message{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: var(--font-14rem);
+    border-radius: 1rem;
+    color: black;
+}
+
+.emojionearea-editor{
+    width: 100% !important;
+    font-size: var(--font-14rem) !important;
+    min-height: 4rem !important;
+    max-height: 4rem !important;
+    padding: 0rem 2rem !important;
+}
+
+.other{
+    background-color: var(--light-light-gray);
+}
+
+.message__time{
+    margin-top: .8rem;
+    font-size: var(--font-11rem);
+}
+
+.my__messageBox{
+    width: 60%;
+    margin: 1rem 0rem;
+    float: right;
+    display: flex;
+}
+
+.user__chatImgMy{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    float: right;
+    object-fit: cover;
+}
+
+.my{
+    background-color: var(--light-blue);
+    color: white;
+}
+
+.message__timeMy{
+    margin-top: .8rem;
+    font-size: var(--font-11rem);
+    float: right;
+}
+
+.user__chatBottom{
+    width: 100%;
+    height: 12%;
+    padding: 2rem 6rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.textMessage__input{
+    width: 90%;
+    padding: 1rem 2rem;
+    background-color: rgba(162, 162, 162, .2);
+    border: none;
+    border-radius: 5rem;
+    outline: none;
+    font-size: var(--font-17rem);
+}
+
+.btn__sendMessage{
+    width: 4rem;
+    height: 4rem;
+    padding: .8rem;
+    margin-left: 2rem;
+    color: white;
+    background-color: var(--light-blue);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}

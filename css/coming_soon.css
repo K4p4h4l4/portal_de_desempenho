@@ -1,0 +1,94 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.container_brevemente{
+    text-align: center;
+    width: 100%;
+    height: 65rem;
+    padding: 0rem;
+    background-color: white;
+    border: solid .1rem var(--light-gray);
+    border-radius: .5rem;
+    -webkit-box-shadow: .2rem .4rem 1rem var(--black-op16);
+            box-shadow: .2rem .4rem 1rem var(--black-op16);
+}
+
+.container--box{
+    width: 100%;
+    height: 100%;
+    background: url(../imagens/angotic2019.jpg);
+}
+
+.shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.countdown--title{
+    width: 100%;
+    font-size: 7rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.countdown hr{
+    width: 70% !important;
+    margin: 0 auto;
+}
+
+.data{
+    width: 60%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: white;
+}
+
+.time{
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem 0rem;
+    border-radius: 50%;
+    border: solid .5rem white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.time--data{
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.time--text{
+    font-size: 1.4rem;
+}

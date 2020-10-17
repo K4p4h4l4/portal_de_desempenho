@@ -1,0 +1,13 @@
+# Avaliação de desempenho.
+
+User-agent: *
+
+Disallow: /
+
+
+Sitemap: https://www.nike.com/sitemap-membership.xml
+Sitemap: https://www.nike.com/sitemap-us-help.xml
+Sitemap: https://www.nike.com/sitemap-landingpage-index.xml
+Sitemap: https://www.nike.com/sitemap-pdp-index.xml
+Sitemap: https://www.nike.com/sitemap-launch-index.xml
+        

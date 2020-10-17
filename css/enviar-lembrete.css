@@ -1,0 +1,23 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.tables .btn-lembrete{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    word-spacing: .5rem;
+    background-color: #29cc97;
+    color: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.tables .btn-lembrete:hover{
+    background-color: #008e76;
+}
+
+
+.tables .btn-lembrete:focus{
+    outline: none;
+}

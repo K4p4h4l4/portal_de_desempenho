@@ -1,0 +1,230 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+/***************************************
+                Variables
+***************************************/
+:root{
+    --very-dark-blue: #212A39;
+    --dark-blue: #002F6C;
+    --light-blue: #5DA4D9;
+    --normal-blue: #2C7FBD;
+    --faddin-brown: #767270;
+    --light-gray: #e5e9f2;
+    --light-light-gray: #f5f6fa;
+    --black-op16: rgba(0,0,0,.16);
+}
+
+/*****************************************
+            Container
+*****************************************/
+
+.container{
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    border: solid .1rem var(--light-gray);
+    border-radius: .5rem;
+    -webkit-box-shadow: .2rem .4rem 1rem var(--black-op16);
+            box-shadow: .2rem .4rem 1rem var(--black-op16);
+}
+
+/*****************************************
+            Profile Container
+*****************************************/
+
+.profilebox{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.porfile--contacts{
+    width: 30%;
+    border-right: solid .2rem var(--light-gray);
+}
+
+.profileHeader{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+}
+
+.profile--image{
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.profile--image img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile--myname{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var( --very-dark-blue);
+}
+
+.profileHeader hr{
+    width: 90%;
+    border: solid .1rem var(--light-gray);
+}
+
+.contacts{
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.contacts--title{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 4rem;
+}
+
+.box--contacts{
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.contact--title{
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--dark-blue);
+    margin-bottom: .5rem;
+}
+
+.contact--content{
+    width: 100%;
+    font-size: 1.4rem;
+    color: var(--faddin-brown);
+}
+
+.profile--details{
+    width: 70%;
+}
+
+.details--header{
+    width: 100%;
+    padding: 2rem;
+    border-bottom: solid .2rem var(--light-gray);
+}
+
+.details--header{
+    font-size: 1.3rem;
+    color: var(--faddin-brown);
+}
+
+.details--body{
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.details{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.details--box{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+}
+
+.details--box label{
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    color: var(--dark-blue);
+    margin-bottom: .5rem;
+}
+
+.details--box input{
+    width: 90%;
+    padding: .5rem 1rem;
+    border: solid .2rem var(--light-gray);
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    color: var(--faddin-brown);
+    outline: none;
+}
+
+.mydetails{
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mydetails--box{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.mydetails--box label{
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.mydetails--box input{
+    width: 95%;
+    padding: .5rem 1rem;
+    border: solid .2rem var(--light-gray);
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    color: var(--faddin-brown);
+    outline: none;
+}
+
+.button--box{
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.btn{
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    color: white;    
+}
+
+.btn-blue{
+    background-color: var(--normal-blue);
+    float: right;
+    margin-right: 5%;
+}
+
+.btn-blue:hover{
+    background-color: var(--light-blue);
+}

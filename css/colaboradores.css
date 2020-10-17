@@ -1,0 +1,25 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.opcoes{
+    width: 100%;
+    height: auto;
+    margin: 20px 0px;
+}
+
+.select__box{
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.year-selection{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.year-selection:focus{
+    outline: none;
+}

@@ -1,0 +1,21 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.error{
+    width: 92%;
+    margin: 100px auto;
+    padding: 10px;
+    border: 1px solid #c80000; /*#a94442;*/
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    z-index: 999;
+}
+
+.error p{
+    color: #c80000; /*0#a94442;*/
+}
