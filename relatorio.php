@@ -267,7 +267,7 @@
             //$pdf->Cell(160,7,iconv('UTF-8', 'windows-1252', 'Pontuação Obtida: '),1,0,'R');
             //$pdf->Cell(30,7,number_format($row['media_total']),1,1,'C');
             $pdf->SetFont('Arial','B',11);
-            $pdf->Cell(160,7,iconv('UTF-8', 'windows-1252', 'Média Ponderada: '),1,0,'R');
+            $pdf->Cell(160,7,iconv('UTF-8', 'windows-1252', 'Média Final: '),1,0,'R');
             $pdf->Cell(30,7,number_format($row['media_ponderada'])."%",1,1,'C');
             // Position at 1.5 cm from bottom
             $pdf->SetY(-40);
