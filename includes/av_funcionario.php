@@ -1150,7 +1150,142 @@
                     }*/
             }
         }else{
-            echo json_encode(1);
+            /* Média ponderada de Assiduidade Antiga, essas médias precisam ser removidas para q as novas sejam inseridas*/
+            if(($as>=8) && ($as<=10)){
+                if($as==10){
+                    $med_pond_assid = 15;
+                }elseif($as==9){
+                     $med_pond_assid = 14;
+                }elseif($as==8){
+                     $med_pond_assid = 13;
+                }
+            }elseif(($as>=4) && ($as<=7)){
+                if($as==7){
+                    $med_pond_assid = 12;
+                }elseif($as==6){
+                     $med_pond_assid = 10.5;
+                }elseif($as==5){
+                     $med_pond_assid = 9;
+                }elseif($as==4){
+                     $med_pond_assid = 7.5;      //1.5  7.5
+                }
+            }
+            elseif(($as>=1) && ($as<=3)){
+                if($as==3){
+                    $med_pond_assid = 6;
+                }elseif($as==2){
+                     $med_pond_assid = 4;
+                }elseif($as==1){
+                     $med_pond_assid = 2;    //4 4
+                }
+            }elseif($as==0){
+                $med_pond_assid = 0;
+            }
+
+            /* Média ponderada de Pontualidade Antiga, essas médias precisam ser removidas para q as novas sejam inseridas*/
+            if(($pon>=1) && ($pon<=10)){
+                if($pon==10){
+                    $med_pond_pont = 15;
+                }elseif($pon==9){
+                     $med_pond_pont = 14;
+                }elseif($pon==8){
+                     $med_pond_pont = 13;
+                }
+            }elseif(($pon>=1) && ($pon <= 7)){
+                if($pon==7){
+                    $med_pond_pont = 12;
+                }elseif($pon==6){
+                     $med_pond_pont = 10.5;
+                }elseif($pon==5){
+                     $med_pond_pont = 9;
+                }elseif($pon==4){
+                     $med_pond_pont = 7.5;      //1.25  13.25
+                }
+            }
+            elseif(($pon>=1) && ($pon <= 3)){
+                if($pon==3){
+                    $med_pond_pont = 6;
+                }elseif($pon==2){
+                     $med_pond_pont = 4;
+                }elseif($pon==1){
+                     $med_pond_pont = 2;       //4 4
+                }
+            }elseif($pon==0){
+                $med_pond_pont = 0;
+            }
+            
+            $med_pond = $media_pond_result - $med_pond_assid - $med_pond_pont;
+            
+            /* Média ponderada de Assiduidade*/
+            if(($ass>=8) && ($ass<=10)){
+                if($ass==10){
+                    $med_pond_assid = 15;
+                }elseif($ass==9){
+                     $med_pond_assid = 14;
+                }elseif($ass==8){
+                     $med_pond_assid = 13;
+                }
+            }elseif(($ass>=4) && ($ass<=7)){
+                if($ass==7){
+                    $med_pond_assid = 12;
+                }elseif($ass==6){
+                     $med_pond_assid = 10.5;
+                }elseif($ass==5){
+                     $med_pond_assid = 9;
+                }elseif($ass==4){
+                     $med_pond_assid = 7.5;      //1.5  7.5
+                }
+            }
+            elseif(($ass>=1) && ($ass<=3)){
+                if($ass==3){
+                    $med_pond_assid = 6;
+                }elseif($ass==2){
+                     $med_pond_assid = 4;
+                }elseif($ass==1){
+                     $med_pond_assid = 2;    //4 4
+                }
+            }elseif($ass==0){
+                $med_pond_assid = 0;
+            }
+
+            /* Média ponderada de Pontualidade*/
+            if(($pont>=1) && ($pont<=10)){
+                if($pont==10){
+                    $med_pond_pont = 15;
+                }elseif($pont==9){
+                     $med_pond_pont = 14;
+                }elseif($pont==8){
+                     $med_pond_pont = 13;
+                }
+            }elseif(($pont>=1) && ($pont <= 7)){
+                if($pont==7){
+                    $med_pond_pont = 12;
+                }elseif($pont==6){
+                     $med_pond_pont = 10.5;
+                }elseif($pont==5){
+                     $med_pond_pont = 9;
+                }elseif($pont==4){
+                     $med_pond_pont = 7.5;      //1.25  13.25
+                }
+            }
+            elseif(($pont>=1) && ($pont <= 3)){
+                if($pont==3){
+                    $med_pond_pont = 6;
+                }elseif($pont==2){
+                     $med_pond_pont = 4;
+                }elseif($pont==1){
+                     $med_pond_pont = 2;       //4 4
+                }
+            }elseif($pont==0){
+                $med_pond_pont = 0;
+            }
+            
+            $nova_media_pond = $med_pond + $med_pond_assid + $med_pond_pont;
+            
+            $query = "update tb_av_usuarios set av_assiduidade = '$ass', av_pontualidade = '$pont', faltas_injustificadas = '$faltas_injustificadas', faltas_justificadas = '$faltas_justificadas', media_ponderada = '$nova_media_pond' where av_ano = '$ano' and av_mes = '$proper_mes' and usuario_id = '$usuario_id'";         
+            mysqli_query($db, $query);
+
+            //echo 1;
         }
     }
 ?>
