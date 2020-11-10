@@ -288,6 +288,11 @@
             $pdf->Cell(190,8,iconv('UTF-8', 'windows-1252', 'Observações'),1,1,'C');
             $pdf->SetFont('Arial','',11);
             $pdf->Cell(190,16, iconv('UTF-8', 'windows-1252', $row['obs']),1,1,'C');
+
+            $pdf->Ln(10);
+            $pdf->SetFont('Arial','',10);
+            $pdf->Cell(90,40,'Justificadas',0,0,'L');
+            $pdf->Ln(160);
             $pdf->Ln(20);
             $pdf->SetFont('Arial','B',10);
             $pdf->Cell(95,8,'O Administrador(a) de Pelouro:',0,0,'L');
