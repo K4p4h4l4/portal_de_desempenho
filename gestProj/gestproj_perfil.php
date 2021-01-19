@@ -37,13 +37,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Área do Gestor de Projectos - Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="icon" href="../imagens/icons/INACOM.ico">  
+    <link rel="stylesheet" href="../css/col_base.css">
+    <link rel="stylesheet" href="../css/col_profile.css" />
+    <script type="text/javascript" src="../js/jquery/341/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/004db0217c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <?php include('../includes/loader.php')?>
-    <?php include('../includes/dashboard_gestproj.php')?>
     <script src=""></script>
 </body>
 </html>
