@@ -4,7 +4,7 @@
     require("../includes/read_data.php");
     include("../includes/check_token.php");
 
-    if(isset($_SESSION['usuario_id']) && ($_SESSION['usuario_tipo']=='gestproj')){
+    if(isset($_SESSION['usuario_id']) && ($_SESSION['usuario_tipo']=='gestprojecto')){
         $id = $_SESSION['usuario_id'];
         
         $query = "select * from tb_usuarios where usuario_id='$id'";
@@ -50,6 +50,111 @@
 
 <body>
     <?php include('../includes/loader.php')?>
-    <script src=""></script>
+    <?php include('../includes/dashboard_gestproj.php')?>
+    <div class="container">
+            <div class="profilebox">
+                <div class="porfile--contacts">
+                    <div class="profileHeader">
+                        <div class="profile--image">
+                            <img src="../imagens/perfil/<?php echo $_SESSION['usuario_foto']; ?>" alt="Minha Foto">
+                        </div>
+                        <div class="profile--myname"><span><?php echo $usuario_nome." ".$usuario_sobrenome ?></span></div>
+                        <hr>
+                    </div>
+                    <div class="contacts">
+                        <div class="contacts--title"><span>Contactos</span></div>
+                        <div class="box--contacts">
+                            <div class="contact--title">
+                                <span>Endereço de E-mail</span>
+                            </div>
+                            <div class="contact--content">
+                                <span><?php echo $usuario_email ?></span>
+                            </div>
+                        </div>
+                        <div class="box--contacts">
+                            <div class="contact--title">
+                                <span>Número de Extensão</span>
+                            </div>
+                            <div class="contact--content">
+                                <span><?php echo $usuario_contacto; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile--details">
+                    <div class="details--header">
+                        <span>Configurações</span>
+                    </div>
+                    <div class="details--body">
+                        <form action="" method="post" id="user_form">
+                            <div class="details">
+                                <div class="details--box">
+                                    <label for="">Nome</label>
+                                    <input type="text" value="<?php echo $usuario_nome; ?>" id="usr_nome" disabled>
+                                </div>
+                                <div class="details--box">
+                                    <label for="">Sobrenome</label>
+                                    <input type="text" value="<?php echo $usuario_sobrenome; ?>" id="usr_sobrenome" disabled>
+                                </div>
+                            </div>
+                            <div class="mydetails">
+                                <div class="mydetails--box">
+                                    <label for="">Nome de Login</label>
+                                    <input type="text" value="<?php echo $usuario_login; ?>" id="usr_login" disabled autocomplete="username">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Foto de perfil</label>
+                                    <input type="file" id="usr_photo" onchange="return fileValidation();" autocomplete="photo" accept="image/*">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">E-mail</label>
+                                    <input type="email" value="<?php echo $usuario_email; ?>" id="usr_email" autocomplete="email">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Número da extensão</label>
+                                    <input type="number" min="0" max="9999" value="<?php echo $usuario_contacto; ?>" id="usr_contacto">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Telemóvel</label>
+                                    <input type="number" min="0" max="999999999" value="<?php echo $usuario_movel; ?>" id="usr_movel">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Palavra-passe Antiga</label>
+                                    <input type="password" id="old_pw" autocomplete="current-password">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Nova Palavra-passe</label>
+                                    <input type="password" id="new_pw" autocomplete="new-password">
+                                </div>
+                                <div class="mydetails--box">
+                                    <label for="">Confirmar nova Palavra-passe</label>
+                                    <input type="password" id="confirm_pw" autocomplete="new-password">
+                                    <input type="hidden" value="tecnico" id="usr_type">
+                                </div>
+                            </div>
+                            <div class="button--box">
+                                <button class="btn btn-blue" type="button" id="update_usr"><span>Actualizar</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/dropdown-menu.js"></script>
+    <script src="../js/update_user.js"></script>
+    <script src="../js/check_token.js"></script>
+    <script>
+        function fileValidation(){
+            var fileInput = document.getElementById('usr_photo');
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.png|\.jpg|\.gif|\.jfif|\.jpeg)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert("Somente imagens no formato: png, jpg, gif, jfif e jpeg são aceites. Obrigado!");
+                fileInput.value = '';
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>

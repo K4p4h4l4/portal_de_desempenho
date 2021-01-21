@@ -4,7 +4,7 @@
     require("../includes/read_data.php");
     include("../includes/check_token.php");
 
-    if(isset($_SESSION['usuario_id']) && ($_SESSION['usuario_tipo']=='gestproj')){
+    if(isset($_SESSION['usuario_id']) && ($_SESSION['usuario_tipo']=='gestprojecto')){
         $id = $_SESSION['usuario_id'];
         
         $query = "select * from tb_usuarios where usuario_id='$id'";
@@ -37,13 +37,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Área do Colaborador - Projectos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="icon" href="../imagens/icons/INACOM.ico">  
+    <link rel="stylesheet" href="../css/col_base.css">
+    <link rel="stylesheet" href="../css/col_projectos.css">
+    <script type="text/javascript" src="../js/jquery/341/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery/dataTables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../js/amdcharts/lib/4/core.js"></script>
+    <script type="text/javascript" src="../js/amdcharts/lib/4/charts.js"></script>
+    <script type="text/javascript" src="../js/amdcharts/lib/4/animated.js"></script>
+    <script src="https://kit.fontawesome.com/004db0217c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <?php include('../includes/loader.php')?>
     <?php include('../includes/dashboard_gestproj.php')?>
+    
     <script src=""></script>
 </body>
 </html>

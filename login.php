@@ -55,7 +55,7 @@
             }elseif($_SESSION['usuario_tipo']=='media'){
                 header('location: ./media/media_noticias');
             }elseif($_SESSION['usuario_tipo']=='gestprojecto'){
-                header('location: ./gestProj/gestproj');
+                header('location: ./gestProj/gestproj_projectos');
             }
         }else{          
     ?>
